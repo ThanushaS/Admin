@@ -1,6 +1,4 @@
 import './navbar.css'
-//import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-//import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
@@ -8,8 +6,7 @@ import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 
 //import Logo from "../assets/Logo/logo.jpg";
 import user from "../assets/user.jpg";
-//import SideMenu from './SideMenu';
-//import MenuItem from './MenuItem';
+
 import { useState } from "react";
 
 const Navbar = (props) => {
