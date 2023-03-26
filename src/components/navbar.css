@@ -1,0 +1,137 @@
+*{
+	margin: 0;
+	padding: 0;
+	}
+  ul{
+	padding: 0;
+	margin: 0;
+	}
+  li{
+	list-style: none;
+	}
+  body{
+	background-color: #eee;
+	font-family: 'Open Sans', sans-serif;
+	}
+  .navbar{
+	height: 100px;
+	border-bottom: 0.5px solid rgb(224, 223, 223) ;
+	display: flex;
+	align-items: center;
+	font-size: 14px; 
+	color: #08070755;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	background-color: lightgray;
+	padding: 0px 0px;
+	transition: width .2s ease-in;
+	background: #11101d;
+	width: 100%;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  }  
+  .items{
+	display: flex;
+	align-items: center;
+	}
+  .item{
+	display: flex;
+	margin-right: 20px;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+	
+  }
+  .items .icon{
+	font-style: 20px;
+	color: #fff;
+  }
+  
+  .avatar{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+			  }
+			  
+   .counter{
+	width: 15px;
+	height: 15px;
+	background-color: red;
+	border-radius: 50%;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-style: 10px;
+	font-weight: bold;
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	}
+  .navbar.search-controller{
+	color: #fff;
+	position: absolute;
+  }
+  .search-controller .search-btn{
+	width: 30px;
+	height: 75px;
+	position: absolute;
+	background: transparent;
+	border: 0;
+	font-size: 20px;
+	position: absolute;
+	margin-left: 10px;
+  }
+  .search-controller input[type=text]{
+	  border: 0;
+	  outline: none;
+	  height: 35px;
+	  color: #fff;
+	  border-radius: 05px;
+	  display: block;
+	  margin: 20px 0;
+	  width: 200%;
+	  box-sizing: border-box;
+	  padding-left: 100px;
+	  color: #0a0a0a; 
+  }
+  .menu-line{
+	height: 3px;
+	width: 20px;
+	background-color: #fff;
+	margin-bottom: 3px;
+  }
+  .menu{
+	display: none;
+	cursor: pointer;
+  }
+ @media all and (max-width:900px){
+	.navbar{
+		flex-direction: column;
+	}
+	.navbar .items{
+		display: block;
+		padding: 10px 0px;
+	}
+	.item{
+		text-align: center;
+		padding: 0;
+		display: none;
+	}
+	.search-controller{
+		align-self: flex-start;
+		margin: 10px 0px 0px 30px;
+	}
+	.menu{
+		display: block;
+		position: absolute;
+		right: 20px;
+		top: 25px;
+	}
+	.search-controller input[type=text]{
+		width: 100%;
+	}
+ }
