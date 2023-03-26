@@ -13,7 +13,7 @@ import user from "../assets/user.jpg";
 import { useState } from "react";
 
 const Navbar = (props) => {
-	const [showmenu, setShowmenu] = useState(false)
+	
 
   return (
    
