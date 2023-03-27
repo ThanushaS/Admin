@@ -135,7 +135,7 @@
   position: absolute;
   left: 100%;
   top: -10px;
-  margin-top: 0;
+  margin-top: 10;
   padding: 10px 20px;
   border-radius: 0 6px 6px 0;
   opacity: 0;
@@ -155,7 +155,6 @@
 .sidebar.inactive .nav li .sub-menu .link-name{
   font-size: 18px;
   opacity: 1;
-  display: block;
 }
 .sidebar .nav li .sub-menu.blank{
   opacity: 1;

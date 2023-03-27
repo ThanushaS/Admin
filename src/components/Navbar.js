@@ -7,11 +7,11 @@ import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 //import Logo from "../assets/Logo/logo.jpg";
 import user from "../assets/user.jpg";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const Navbar = (props) => {
-	
+const Navbar = () => {
 
+  
   return (
    
     <div className="navbar">
@@ -48,12 +48,11 @@ const Navbar = (props) => {
               />
                 </div>
             </div>
-            <div className='menu'>
-            <div className='menu-line'></div>
-            <div className='menu-line'></div>
-            <div className='menu-line'></div>
+            <div className='menu' >
+            <i className='bi bi-list'></i>
             </div>
           </div>
+          
   );
 };
 
