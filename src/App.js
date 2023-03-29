@@ -5,6 +5,7 @@ import SideMenu, { menuItems } from "./components/SideMenu";
 import { BrowserRouter as Router, Switch, Route, Routes} from "react-router-dom";
 import Navbar from './components/Navbar';
 import Content from './components/Content';
+import Container from './components/Container';
 //import { Category, Dashboard } from '@mui/icons-material';
 //import Content from './components/content';
 //import { Container } from '@mui/system';
@@ -21,7 +22,7 @@ const App = () => {
           }}/>
            <div className= {`Container ${inactive ? "inactive" : ""}`}>
               <Navbar/>
-             
+              <Container/>
       
            {/*   {menuItems.map((menu, index) => (
             <>
@@ -61,7 +62,6 @@ const App = () => {
     
         </Switch>*/}
          </div>
-         
     </Router>
     
     </div>
