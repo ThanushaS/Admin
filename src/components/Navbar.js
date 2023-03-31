@@ -1,7 +1,6 @@
-import './navbar.css'
+import './navbar.css';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
-import  SettingsOutlinedIcon from '@mui/icons-material';
 
 //import Logo from "../assets/Logo/logo.jpg";
 import user from "../assets/user.jpg";
@@ -9,56 +8,45 @@ import user from "../assets/user.jpg";
 import { useState, useEffect } from "react";
 
 const Navbar = () => {
-
+    const[inactive, setInactive]= useState(false);
   
   return (
-   
-    <div className="navbar">
-      <div className="search-controller">
-        <button className="search-btn">
-          <i class="bi bi-search"></i>
-        </button>
-        <input type="text" placeholder="Search..." />
-      </div>
-	 
-          {/*<div className="search">
-            <input type="text" placeholder="search..." />
-            <SearchOutlinedIcon/>
-          </div>*/}
-           <div className='items'>
-           
-            <div className="item">
-                <MailOutlineOutlinedIcon className="icon"/>  
-                <div className='counter'>3</div>            
+        <div className="navbar navbar-expand-lg navbar-light  py-4 px-4">
+            <div>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+              </div>
             </div>
-            <div className="item">
-                <NotificationsNoneOutlinedIcon className="icon"/> 
-                <div className='counter'>2</div>             
-            </div>  <div className="item">
-                <NotificationsNoneOutlinedIcon className="icon"/> 
-                <div className='counter'>2</div>             
-            </div>
-          {/*  <div className="item">
-                <Person2OutlinedIcon className="icon"/>
-                <div className='counter'>1</div>            
-            </div>
-            <div className="item">
-                <DarkModeOutlinedIcon className="icon"/>
-        </div>*/}
-            <div className="item">
-            <img src={user} alt="user" 
-              className="avatar"
-              />
+                <div className="search-controller">
+                  <button className="search-btn">
+                    <i class="bi bi-search"></i>
+                  </button>
+                <input type="text" placeholder="Search..." />
                 </div>
-        {/*             <div className="logo-details">
-          <i  class='bi-bootstrap'></i>
-              <span  class="logo_name">CodingStyle</span>
-            </div>*/}
+          <nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <div className='items'>
+                <div className="item">
+                    <MailOutlineOutlinedIcon className="icon"/>  
+                    <div className='counter'>3</div>            
+                </div>
+                <div className="item">
+                    <NotificationsNoneOutlinedIcon className="icon"/> 
+                    <div className='counter'>2</div>             
+                </div>  
+                <div className="item">
+                    <NotificationsNoneOutlinedIcon className="icon"/> 
+                <div className='counter'>2</div>             
+                </div>
+                </div>
+              </ul>
             </div>
-            <div className='menu' >
-            <i className='bi bi-list'></i>
-            </div>
-          </div>
+          </nav>
+        </div>
           
   );
 };

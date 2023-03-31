@@ -102,9 +102,9 @@ const SideMenu = (props) => {
               }}
             />
           ))}
-{/*               <li>
+              {/*} <li className='list-group list-group-flush my-3'>
                     <a href="#">
-                      <i class='bx bx-grid-alt'></i>
+                      <i class="bi bi-grid"></i>
                     <span class="link-name">Dashboard</span>
                     </a>
                     <ul class="sub-menu blank">
@@ -129,20 +129,19 @@ const SideMenu = (props) => {
 
    
       <li>
-        
       <div class="p-del">
         <div class="profile-content">
           <img src={user} alt="user"/>
         </div>
         
         <div class="name-job">
-        <div class="profile_name">John</div>
-        <div class="job">Web Desginer</div>
+          <div class="profile_name">John</div>
+          <div class="job">Web Desginer</div>
+        </div>
+        <i onClick={()=>{setInactive(!inactive);}} class='bi bi-box-arrow-left'></i>
       </div>
-      <i onClick={()=>{setInactive(!inactive);}} class='bi bi-box-arrow-left'></i>
+      </li>
       
-      </div>
-            </li>
     </ul>
      </div>
      </div>

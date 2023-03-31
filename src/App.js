@@ -22,6 +22,7 @@ const App = () => {
           }}/>
            <div className= {`Container ${inactive ? "inactive" : ""}`}>
               <Navbar/>
+
               <Container/>
       
            {/*   {menuItems.map((menu, index) => (
@@ -62,6 +63,7 @@ const App = () => {
     
         </Switch>*/}
          </div>
+        
     </Router>
     
     </div>

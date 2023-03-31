@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 0;
-  height: 1024px;
+  height: 100%;
   width: 94px;
   background-size: cover;
   z-index: 100;
@@ -53,6 +53,7 @@
   font-weight: 600;
   transition: 0.3s ease;
   transition-delay: 0.1s;
+  opacity: 0;
 }
 .sidebar.inactive .logo-details .logo_name{
   transition-delay: 0s;
@@ -252,16 +253,13 @@
   object-fit: cover;
   border-radius: 16px;
   margin: 0 14px 0 25px;
-  background: #1d1b31;
+  background: linear-gradient(180deg, #191F2C 0%, #131221 100%);
   transition: all 0.5s ease;
   left: 28px;
   top: 948px;
   text-align: center;
   color: #717171;
   cursor: pointer;
-  transition: all 0.3s ease;
-
- 
 }
 .sidebar.inactive .p-del img{
   padding: 10px;
@@ -272,6 +270,8 @@
   font-size: 18px;
   font-weight: 500;
   white-space: nowrap;
+  display: none;
+
 }
 .sidebar.inactive .p-del i,
 .sidebar.inactive .p-del .profile_name,
@@ -303,3 +303,5 @@
 .Container.inactive{
   margin-left: 94px;
 }
+
+
