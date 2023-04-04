@@ -13,7 +13,6 @@
 	background-color: #eee;
 	font-family: 'Open Sans', sans-serif;
 	}
-	
   .navbar{
 	height: 73px;
 	border-bottom: 0.5px solid rgb(224, 223, 223) ;
@@ -25,7 +24,6 @@
 	font-size: 14px;
 	margin-top: 0;
 	margin-bottom: 0;
-	margin-left: 0;
 	padding: 0px 0px;
 	background: #2A3240;
   }  
@@ -50,16 +48,46 @@
 	top: px;
 	justify-content: space-between;
 	left: 60px;
+	line-height: 14px;
   }
+
+  .profile_name {
+	width: 62px;
+	height: 14px;
+	left: 1311px;
+	top: 21px;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 14px;
+/* identical to box height */
+	text-transform: capitalize;
+	color: #FFFFFF;
+  }
+  .mail{
+width: 79px;
+height: 12px;
+left: 1311px;
+top: 41px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 12px;
+/* identical to box height */
+
+
+color: rgba(255, 255, 255, 0.7);
+  }
+  
   .avatar{
-	border-radius: 50%;
-	object-fit: cover;
 	border-radius: 16px;
-	transition: all 0.5s ease;
-	text-align: center;
-	cursor: pointer;
 	width: 37.94px;
 	height: 37.94px;
+	left: 1260.41px;
 	top: 17.53px;
 	}
    .counter{
@@ -111,19 +139,11 @@
 	background: rgba(255, 255, 255, 0.04);
 	box-sizing: border-box;
   }
-  .navbar-toggler {
-    padding: .25rem .75rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    background-color: transparent;
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    transition: box-shadow .15s ease-in-out;
-}
-
  @media all and (max-width:1100px){
 	.navbar{
 		flex-direction: column;
+		flex-wrap: wrap;
+		
 	}
 	.navbar .items{
 		display: block;
@@ -133,6 +153,19 @@
 		text-align: center;
 		padding: 0;
 		display: none;
+	}
+	.navbar-nav{
+		display: none;
+	}
+	.navbar-nav-mobile{
+		position: absolute;
+		display: block;
+		list-style: none;
+		background-color: #db2b39;
+		left: 0;
+		top: 75px;
+		transition: all 0.5s ease-out;
+		width: 100%;
 	}
 	.search-controller{
 		align-self: flex-start;
@@ -183,20 +216,7 @@
  }
  
 
-  @media (min-width: 768px) {
-	#sidebar-wrapper {
-	  margin-left: 0;
-	}
-  
-	#page-content-wrapper {
-	  min-width: 0;
-	  width: 100%;
-	}
-  
-	#wrapper.toggled #sidebar-wrapper {
-	  margin-left: -15rem;
-	}
-  }
+ 
   .navbar .p-del{
 	position: fixed;
 	display: flex;
@@ -218,3 +238,57 @@
 	color: rgba(255, 255, 255, 0.7);
   }
 
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+
+  * {
+	  padding: 0;
+	  margin: 0;
+	  box-sizing: border-box;
+	  font-family: "Titillium Web", sans-serif;
+  }
+  
+  :root {
+	  --mainColor: #29335c;
+	  --mainColorLight: #5767aa;
+	  --secondaryColor: #db2b39;
+	  --textColor: #eee;
+  }
+  
+  header {
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	  height: 80px;
+	  padding: 0 2rem;
+	  background-color: var(--mainColor);
+	  color: var(--textColor);
+  }
+  
+  nav a {
+	  margin: 0 1rem;
+	  color: var(--textColor);
+	  text-decoration: none;
+  }
+  
+  nav a:hover {
+	  color: var(--secondaryColor);
+  }
+  
+  header .nav-btn {
+	  padding: 5px;
+	  cursor: pointer;
+	  background: transparent;
+	  border: none;
+	  outline: none;
+	  color: var(--textColor);
+	  visibility: hidden;
+	  opacity: 0;
+	  font-size: 1.8rem;
+  }
+  
+  header div,
+  nav {
+	  display: flex;
+	  align-items: center;
+  }
+  
