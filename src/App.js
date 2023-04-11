@@ -4,25 +4,36 @@ import {useState} from 'react';
 import SideMenu, { menuItems } from "./components/SideMenu";
 import { BrowserRouter as Router, Switch, Route, Routes} from "react-router-dom";
 import Navbar from './components/Navbar';
-import Content from './components/Content';
+//import Content from './components/Content';
 import Container from './components/Container';
 //import { Category, Dashboard } from '@mui/icons-material';
 //import Content from './components/content';
 //import { Container } from '@mui/system';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 const App = () => {
   const [inactive, setInactive] = useState(false);
+  const [toggle,setToggle]=useState(true)
+  const Toggle=()=>{
+    setToggle(!toggle)
+  }
 
   return (
-   <div className='App'>
+  <div className=''>
+    <div className='row'>
+      <div className='col'>
       <Router>
-        <SideMenu
+        {toggle && <div className='col-2 bg-white vh- position-fixed	'>
+          <SideMenu
           onCollapse={(inactive) => {
-            console.log(inactive);
+           console.log(inactive);
             setInactive(inactive);
-          }}/>
+          }}/> </div>}
+          {toggle && <div className='col-1'></div>}
+          <div className='col'>
            <div className= {`Container ${inactive ? "inactive" : ""}`}>
-              <Navbar/>
-
+              <Navbar Toggle={Toggle}/>
+            </div>
               <Container/>
       
            {/*   {menuItems.map((menu, index) => (
@@ -65,7 +76,8 @@ const App = () => {
          </div>
         
     </Router>
-    
+    </div>
+    </div>
     </div>
   );
 };

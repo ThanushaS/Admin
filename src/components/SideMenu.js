@@ -77,13 +77,13 @@ const SideMenu = (props) => {
     }, [inactive]);
     
     return (
-      <div className='wrapper'>
-          <div className={`sidebar ${inactive ? "inactive" : ""}`}>
-            <div className="logo-details">
+    <div className='wrapper'>
+      <div className={`sidebar ${inactive ? "inactive" : ""}`}>
+        <div className="logo-details">
           <i onClick={()=>{setInactive(!inactive);}} class='bi-bootstrap'></i>
-              <span  class="logo_name">CodingStyle</span>
-            </div>
-            <ul className="nav">
+          <span  class="logo_name">CodingStyle</span>
+          </div>
+          <ul className="nav">
             {menuItems.map((menuItem, index) => (
             <MenuItem
               key={index}
@@ -102,25 +102,25 @@ const SideMenu = (props) => {
               }}
             />
           ))}
-              {/*} <li className='list-group list-group-flush my-3'>
+            {/*<li className='list-group list-group-flush my-3'>
                     <a href="#">
-                      <i class="bi bi-grid"></i>
-                    <span class="link-name">Dashboard</span>
+                      <i className="bi bi-grid fs-5 me-2"></i>
+                    <span className="link-name fs-5">Dashboard</span>
                     </a>
-                    <ul class="sub-menu blank">
+                    <ul className="sub-menu blank">
                     <li><a class="link-name" href="">Dashboard</a></li>
                     </ul>
                 </li>
                 <li>
-                  <div class="icon">
+                  <div className="icon">
                     <a href="#">
-                      <i class='bx bx-collection'></i>
-                      <span class="link-name">Category</span>
+                      <i className='bx bx-collection'></i>
+                      <span className="link-name">Category</span>
                     </a>
-                    <i class='bx bxs-chevron-down arrow'></i>
+                    <i className='bx bxs-chevron-down arrow'></i>
                   </div>
-                  <ul class="sub-menu">
-                    <li><a class="link-name" href="#">Category</a></li>
+                  <ul className="sub-menu">
+                    <li><a className="link-name" href="#">Category</a></li>
                     <li><a href="#">Web Design</a></li>
                     <li><a href="#">Card Design</a></li>
                     <li><a href="#">Login Form</a></li>
@@ -129,10 +129,10 @@ const SideMenu = (props) => {
 
    
       <li>
-      <div class="p-del">
-        <div class="profile-content">
-          <img src={user} alt="user"/>
-        </div>
+        <div class="p-del">
+          <div class="profile-content">
+            <img src={user} alt="user"/>
+          </div>
         
         <div class="name-job">
           <div class="profile_name">John</div>

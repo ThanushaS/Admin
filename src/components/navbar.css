@@ -15,7 +15,6 @@
 	}
   .navbar{
 	height: 73px;
-	border-bottom: 0.5px solid rgb(224, 223, 223) ;
 	display: flex;
 	font-size: 14px; 
 	transition: width .2s ease-in;
@@ -52,10 +51,10 @@
   }
 
   .profile_name {
-	width: 62px;
-	height: 14px;
-	left: 1311px;
-	top: 21px;
+		width: 62px;
+		height: 14px;
+		left: 1311px;
+		top: 21px;
 
 	font-family: 'Roboto';
 	font-style: normal;
@@ -290,5 +289,6 @@ color: rgba(255, 255, 255, 0.7);
   nav {
 	  display: flex;
 	  align-items: center;
+
   }
   
