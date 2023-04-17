@@ -13,29 +13,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 const App = () => {
   const [inactive, setInactive] = useState(false);
-  const [toggle,setToggle]=useState(true)
-  const Toggle=()=>{
-    setToggle(!toggle)
-  }
+ 
 
   return (
-  <div className=''>
-    <div className='row'>
+
       <div className='col'>
       <Router>
-        {toggle && <div className='col-2 bg-white vh- position-fixed	'>
           <SideMenu
           onCollapse={(inactive) => {
            console.log(inactive);
             setInactive(inactive);
-          }}/> </div>}
-          {toggle && <div className='col-1'></div>}
-          <div className='col'>
+          }}/> 
            <div className= {`Container ${inactive ? "inactive" : ""}`}>
-              <Navbar Toggle={Toggle}/>
-            </div>
-              <Container/>
-      
+              <Navbar />
+              </div>
+             
+             
            {/*   {menuItems.map((menu, index) => (
             <>
               <Route key={menu.name} exact={menu.exact} path={menu.to}>
@@ -73,12 +66,12 @@ const App = () => {
             </Route>
     
         </Switch>*/}
-         </div>
+      
         
     </Router>
     </div>
-    </div>
-    </div>
+   
+ 
   );
 };
 

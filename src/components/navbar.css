@@ -1,45 +1,19 @@
-*{
-	margin: 0;
-	padding: 0;
-	}
-  ul{
-	padding: 0;
-	margin: 0;
-	}
-  li{
-	list-style: none;
-	}
-  body{
-	background-color: #eee;
-	font-family: 'Open Sans', sans-serif;
-	}
-  .navbar{
+.navbar{
 	height: 73px;
 	display: flex;
-	font-size: 14px; 
-	transition: width .2s ease-in;
-	background: #2A3240;
-	align-items: center;
 	font-size: 14px;
-	margin-top: 0;
-	margin-bottom: 0;
-	padding: 0px 0px;
-	background: #2A3240;
-  }  
-  .items{
-	display: flex;
-	align-items: center;
-	}
-  .item{
-	display: flex;
-	margin-right: 20px;
-	align-items: center;
-	position: relative;
-	cursor: pointer;
-	font-style: 20px;
-	color:#726761;
-  }
-  .items .item{
+	background:#2A3240;
+	width: calc(100%-94px);
+}
+.navbar.inactive {
+	margin-left: 0px;
+	margin-left: -6rem;
+	-webkit-transition: margin 0.25s ease-out;
+	-moz-transition: margin 0.25s ease-out;
+	-o-transition: margin 0.25s ease-out;
+	transition: margin 0.25s ease-out;
+} 
+.item i{
 	color:#726761;
 	cursor: pointer;
 	width: 24px;
@@ -48,63 +22,13 @@
 	justify-content: space-between;
 	left: 60px;
 	line-height: 14px;
-  }
-
-  .profile_name {
-		width: 62px;
-		height: 14px;
-		left: 1311px;
-		top: 21px;
-
-	font-family: 'Roboto';
-	font-style: normal;
-	font-weight: 700;
-	font-size: 12px;
-	line-height: 14px;
-/* identical to box height */
-	text-transform: capitalize;
-	color: #FFFFFF;
-  }
-  .mail{
-width: 79px;
-height: 12px;
-left: 1311px;
-top: 41px;
-
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 10px;
-line-height: 12px;
-/* identical to box height */
-
-
-color: rgba(255, 255, 255, 0.7);
-  }
-  
-  .avatar{
-	border-radius: 16px;
-	width: 37.94px;
-	height: 37.94px;
-	left: 1260.41px;
-	top: 17.53px;
-	}
-   .counter{
-	border-radius: 50%;
-	box-sizing: border-box;
-	position: absolute;
-	left: 59.09%;
-	right: 9.09%;
-	top: 0%;
-	bottom: 68.18%;
-	background: #E64547;
-	border: 1px solid #2A3240;
-	}
-	.search-controller{
-		color: #fff;
+	gap: 10px;
+}
+.search-controller{
+	color: #fff;
 		position: relative;
-	  }
-  .search-controller .search-btn{
+}
+.search-controller .search-btn{
 	width: 30px;
 	height: 40px;
 	position: absolute;
@@ -125,170 +49,128 @@ color: rgba(255, 255, 255, 0.7);
 	line-height: 16px;
 	color: rgba(143, 143, 143, 0.48);
   }
-  .search-controller input[type=text]{
-	border: 0;
-	display: block;
-	margin: 2px 0;
-	padding-left: 100px;
-	height: 41px;
-	width: 915px;
-	left: 114px;
-	top: 1px;
-	border-radius: 4px;
-	background: rgba(255, 255, 255, 0.04);
-	box-sizing: border-box;
-  }
- @media all and (max-width:1100px){
-	.navbar{
-		flex-direction: column;
-		flex-wrap: wrap;
-		
-	}
-	.navbar .items{
-		display: block;
-		padding: 10px 0px;
-	}
-	.item{
-		text-align: center;
-		padding: 0;
-		display: none;
-	}
-	.navbar-nav{
-		display: none;
-	}
-	.navbar-nav-mobile{
-		position: absolute;
-		display: block;
-		list-style: none;
-		background-color: #db2b39;
-		left: 0;
-		top: 75px;
-		transition: all 0.5s ease-out;
-		width: 100%;
-	}
-	.search-controller{
-		align-self: flex-start;
-		margin: 0px 0px 0px 0px;
-	}
-	.menu{
-		display: block;
-		position: absolute;
-		right: 20px;
-		top: 1px;
-	}
-	.showmenu{
-		display: block;
-	}
-	.search-controller input[type=text]{
-		border: 0;
-		outline: none;
-		height: 30px;
-		color: #fff;
-		border-radius: 05px;
-		display: block;
-		margin: 10px 0;
-		width:100%;
+		.search-controller input[type=text]{
+			border: 0;
+			display: block;
+			margin: 2px 0;
+			padding-left: 100px;
+			height: 41px;
+			width: 915px;
+			left: 114px;
+			top: 1px;
+			border-radius: 4px;
+			background: rgba(255, 255, 255, 0.04);
+			box-sizing: border-box;
+				}
+				.avatar{
+					border-radius: 16px;
+					width: 37.94px;
+					height: 37.94px;
+					left: 1260.41px;
+					top: 17.53px;
+					}
+					
+  .mail, .profile_name{
+			width: 79px;
+			height: 12px;
+			left: 1311px;
+			top: 41px;
+			margin-left: 10px;
+			font-family: 'Roboto';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 10px;
+			line-height: 12px;
+			/* identical to box height */
+			
+			
+			color: rgba(255, 255, 255, 0.7);
+		}
+		.item{
+			position: relative;
+			display: flex;
+		margin-right: 0px;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+	font-style: 20px;
+	margin-left: 10px;
+	color:#726761;
+	cursor: pointer;
+		}
+		.left{
+			cursor: pointer;
+	color:#726761;
+		}
+		.counter{
+		border-radius: 50%;
 		box-sizing: border-box;
-		padding-left: 100px;
+		position: absolute;
+		left: 60.09%;
+		right: 9.09%;
+		top: 0%;
+		bottom: 68.18%;
+		background: #E64547;
+		border: 1px solid #2A3240;
+		}
+			
+
+
+							@media screen and (max-width:1100px){
+								.search-controller{
+									align-self: flex-start;
+									margin: 0px 0px 0px 0px;
+								}
+								.search-controller input[type=text]{
+									border: 0;
+									outline: none;
+									height: 40px;
+									color: #fff;
+									border-radius: 05px;
+									display: block;
+									margin: 10px 0;
+									width:100%;
+									box-sizing: border-box;
+									padding-left: 100px;
+								}
+.view, .avatar{
+	align-items: center;
+	font-size: large;
+	background:#2A3240;
+}	
+
+.counter{
+	border-radius: 50%;
+	box-sizing: border-box;
+	position: absolute;
+	left: 59.09%;
+	right: 9.09%;
+	top: 0%;
+	bottom: 68.18%;
+	background: #E64547;
+	border: 1px solid #2A3240;
 	}
-	.search-controller .search-btn{
-		width: 10px;
-		height: 55px;
-		position: absolute;
-		background: transparent;
-		border: 0;
-		font-size: 15px;
-		position: absolute;
-		margin-left: 0px;
-		color:#FFFFFF;
-		position: absolute;
-		width: 55px;
-		height: 16px;
-		top: 18px;
+	.mail, .profile_name{
+		width: 79px;
+		height: 12px;
+		left: 1311px;
+		top: 41px;
+		
 		font-family: 'Roboto';
 		font-style: normal;
 		font-weight: 400;
+		font-size: 10px;
+		line-height: 12px;
+		/* identical to box height */
+		
+		
+		color: rgba(255, 255, 255, 0.7);
+	}
+	.navbar{
+		height: px;
+		display: flex;
 		font-size: 14px;
-		line-height: 16px;
-		color: rgba(143, 143, 143, 0.48);
-	  }
- }
- 
-
- 
-  .navbar .p-del{
-	position: fixed;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	transition: all 0.5s ease;
-  }
-  .navbar .p-del .profile_name,
-  .navbar .p-del .job{
-	width: 79px;
-	height: 12px;
-	left: 1311px;
-	top: 41px;
-	font-family: 'Roboto';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 10px;
-	line-height: 12px;
-	color: rgba(255, 255, 255, 0.7);
-  }
-
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
-
-  * {
-	  padding: 0;
-	  margin: 0;
-	  box-sizing: border-box;
-	  font-family: "Titillium Web", sans-serif;
-  }
-  
-  :root {
-	  --mainColor: #29335c;
-	  --mainColorLight: #5767aa;
-	  --secondaryColor: #db2b39;
-	  --textColor: #eee;
-  }
-  
-  header {
-	  display: flex;
-	  align-items: center;
-	  justify-content: space-between;
-	  height: 80px;
-	  padding: 0 2rem;
-	  background-color: var(--mainColor);
-	  color: var(--textColor);
-  }
-  
-  nav a {
-	  margin: 0 1rem;
-	  color: var(--textColor);
-	  text-decoration: none;
-  }
-  
-  nav a:hover {
-	  color: var(--secondaryColor);
-  }
-  
-  header .nav-btn {
-	  padding: 5px;
-	  cursor: pointer;
-	  background: transparent;
-	  border: none;
-	  outline: none;
-	  color: var(--textColor);
-	  visibility: hidden;
-	  opacity: 0;
-	  font-size: 1.8rem;
-  }
-  
-  header div,
-  nav {
-	  display: flex;
-	  align-items: center;
-
-  }
-  
+		background:#2A3240;
+		width: calc(100%-94px);
+	}
+								}

@@ -2,15 +2,20 @@ import React,{useEffect,useState} from 'react';
 import MenuItem from './MenuItem';
 import user from "../assets/user.jpg";
 
-
 export const menuItems=[
   {
    name:"Dashboard",
    exact:true,
-    to:"/",
+    to:"/dashboard.html",
     iconClassName:"bi bi-grid",
-    subMenuBlank:[
-      { name:"Dashboard", to:"/dasboard"},
+    iconClosedClassName:"bi-chevron-down arrow",
+    iconOpenedClassName:'bi-chevron-compact-right',
+    subMenuBlank:"Dashboard",
+
+    subMenus:[
+      { name:" Manage My Tournaments", to:"/dasboard/ManageMyTournaments"},
+      { name:"Manage Team/ Organisation", to:"/dasboard/ManageTeam/Organisation"},
+      { name:"Manage Services", to:"/dasboard/ManageServices"},
     ],
   },
  {
@@ -77,12 +82,16 @@ const SideMenu = (props) => {
     }, [inactive]);
     
     return (
-    <div className='wrapper'>
-      <div className={`sidebar ${inactive ? "inactive" : ""}`}>
+    <div className=' wrapper-fluid position-relative d-flex p-0'>
+      <div className={`sidebar ${inactive ? "inactive" : ""}`}id="menu-toggle" >
+    
         <div className="logo-details">
-          <i onClick={()=>{setInactive(!inactive);}} class='bi-bootstrap'></i>
-          <span  class="logo_name">CodingStyle</span>
+          <i  className='bi-bootstrap'></i>
+         
           </div>
+          <div className=" left">
+                  <i className="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"onClick={()=>{setInactive(!inactive);}} ></i>
+            </div>
           <ul className="nav">
             {menuItems.map((menuItem, index) => (
             <MenuItem
@@ -103,7 +112,7 @@ const SideMenu = (props) => {
             />
           ))}
             {/*<li className='list-group list-group-flush my-3'>
-                    <a href="#">
+                    <a href="dashboard.html">
                       <i className="bi bi-grid fs-5 me-2"></i>
                     <span className="link-name fs-5">Dashboard</span>
                     </a>
@@ -146,7 +155,7 @@ const SideMenu = (props) => {
      </div>
      </div>
      
-            
+                
     
     );
 };

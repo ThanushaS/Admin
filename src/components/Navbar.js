@@ -1,58 +1,82 @@
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import './navbar.css';
 //import Logo from "../assets/Logo/logo.jpg";
 import user from "../assets/user.jpg";
 import { useState, useEffect } from "react";
 import 'bootstrap/js/dist/collapse';
 import 'bootstrap/js/dist/dropdown';
+function NavScroll() {
+  const [isActive, setActive] = useState("false");
+  const [openMenu, setOpenMenu] = useState(false);
+  const toggleMenu = () => {
+    setOpenMenu(!openMenu);
+  };
 
-const Navbar = ({Toggle}) => {
+ 
+  const[inactive, setInactive]=useState(false);
+
   return (
-    <div className='navbar navbar-expand-lg   py-4 px-1'>
-        <div>
-            <div className=" item d-flex align-items-center">
-                  <i className="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle" onClick={Toggle}></i>
-            </div>
-        </div>
-        <div className="search-controller">
+    <Navbar  expand="lg">
+      <Container fluid>
+        <Navbar.Brand href="#">
+       
+            </Navbar.Brand>
+            <Nav.Link href="#action1">
+            <div className="search-controller">
             <button className="search-btn">
                 <i className="bi bi-search"></i>
             </button>
                   <input type="text" placeholder="Search..." />
         </div>
-        <nav>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse"data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-          </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <div className='items'>
-                <div className="item">
+            </Nav.Link>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="view me-auto my-4 my-lg-0 "
+            style={{ maxHeight: '100%' }}
+            navbarScroll
+          >
+        
+            <Nav.Link href="#action2">
+            <div className="item">
                   <i className="bi bi-envelope-fill"></i>
                   <div className='counter'></div>            
                 </div>
-                <div className="item">
+            </Nav.Link>
+            <Nav.Link href="#action2">
+            <div className="item">
                   <i className="bi bi-bell-fill"></i>
                   <div className='counter'></div>             
-                </div>  
-                  <div className="item">
+                </div>
+            </Nav.Link>
+            <Nav.Link href="#action2">
+            <div className="item">
                       <i className="bi bi-gear-fill"></i>
                   </div>
-                  <div className="item">
+            </Nav.Link>
+           
+            <Nav.Link href="#" disabled>
+        
+            </Nav.Link>
+         
+          <div className="item">
                     <img src={user} alt="user" className="avatar"/>
-                    <div className="name-job">
+                    <div className="profile-details">
                       <div className="profile_name">John</div>
                       <div className="mail">cod@gmail.com</div>
                     </div>
+                  
                   </div>
-                  </div>
-              </ul>
-        </div>
-      </nav>
-      
-    </div>
-    
-          
+                  </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default NavScroll;
